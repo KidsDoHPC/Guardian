@@ -17,7 +17,7 @@ Guardian is in a **strict filter** mode by default, this means that the way *URL
 ``` 
 [http/https] :// [TLD] / [Resoure]
 ```
-Guardian expect an ending forward slash ("/") on ending TLD, otherwise the request will fail.
+Guardian expect an ending forward slash ("/") on ending TLD, otherwise the request will fail. **Note:** Although a specific Domain is accepted, does not automaticly make all resources on the Domain accepted by **Guardian**.
 
 ## Limitations
 Guardian cannot pass along authentication for security reasons. Some websites/API's might also block the request sent by Guardian.
