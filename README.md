@@ -17,11 +17,28 @@ Guardian is in a **strict filter** mode by default, this means that the way *URL
 ``` 
 [http/https] :// [TLD] / [Resoure]
 ```
-Guardian expect an ending forward slash ("/") on ending TLD, otherwise the request will fail. **Note:** Although a specific Domain is accepted, does not automaticly make all resources on the Domain accepted by **Guardian**.
+Guardian expect an ending forward slash ("/") on ending TLD, otherwise the request will fail. 
+**Note:** Although a specific Domain is accepted, does not automaticly make all resources on the Domain accepted by **Guardian**.
+
+## Request Routing
+Guardian follow a three-step request route. 1). Check Whitelist, 2). Get Response Code, 3). Make Request.
+
+``` 
+Whitelist
+```
+``` 
+Response Code
+```
+``` 
+Request
+```
 
 ## Limitations
 Guardian cannot pass along authentication for security reasons. Some websites/API's might also block the request sent by Guardian.
 
 ## Guardian Request
-When Guardian send a HTTP Request it will always identify itself with the user agent (unless otherwise is required) 
-"Guardian;https://kidsdohpc.org/Guardian.html;0.0.0.0". Where "0.0.0.0" is the origin IPv4 Address.
+When Guardian send a HTTP Request it will always identify itself with the user agent (unless otherwise is required) "Guardian (https://kidsdohpc.org/)".
+
+## Known Issues
+
+On some requests Guardian may return an empty response. 
